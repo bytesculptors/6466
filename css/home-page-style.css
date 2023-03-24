@@ -1,0 +1,114 @@
+.page-top {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+.header {
+    margin-top: 10px;
+    display: flex;
+    height: 60px;
+    /* background-color: rgb(78, 80, 79); */
+}
+.left-section {
+    display: flex;
+    margin-left: 10px;
+}
+.page-pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 60px;
+    /* background-color: rgba(18, 177, 62, 1); */
+    cursor: pointer;
+}
+.photo {
+    height: 60px;
+}
+.space {
+    flex: 1;
+}
+.right-section {
+    width: 550px;
+    display: flex;
+    justify-content: space-between;
+}
+.cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 60px;
+    /* background-color: lightblue; */
+}
+.cart-button {
+    background-color: rgba(18, 177, 62, 1);
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 3px 8px #888888;
+}
+.cart-button:hover {
+    opacity: 0.6;
+}
+.view-transaction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 60px;
+    /* background-color: lightcoral; */
+}
+.view-transaction-button {
+    background-color: rgba(18, 177, 62, 1);
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 3px 8px #888888;
+}
+.view-transaction-button:hover {
+    opacity: 0.6;
+}
+.log-in {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 60px;
+    /* background-color: lightgreen; */
+}
+.log-in-button {
+    border-color: rgba(18, 177, 62, 1);
+    border-style: solid;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 3px 8px #888888;
+}
+.log-in-button:hover {
+    background-color: rgba(18, 177, 62, 1);
+    color: #fff;
+}
+.empty-space {
+    height: 100px;
+    background-color:chartreuse;
+}
+.side-bar {
+    /* margin-top: 160px; */
+    width: 150px;
+    height: 1000px;
+    background-color: aqua;
+    position: fixed;
+    left: 0;
+    top: 170px;
+}
