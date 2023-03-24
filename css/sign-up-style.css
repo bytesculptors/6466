@@ -11,8 +11,43 @@ input {
     border-radius: 10px;
 }
 
-.input::placeholder {
+.name::placeholder {
     color: #000;
     font-weight: bold;
 }
-
+.date-birth::placeholder {
+    color: #000;
+    font-weight: bold;
+}
+.id-number::placeholder {
+    color: #000;
+    font-weight: bold;
+}
+.phone::placeholder {
+    color: #000;
+    font-weight: bold;
+}
+.address::placeholder {
+    color: #000;
+    font-weight: bold;
+}
+.username::placeholder {
+    color: #000;
+    font-weight: bold;
+}
+.pass::placeholder {
+    color: #000;
+    font-weight: bold;
+}
+.sign-up {
+    background-color: rgba(18, 177, 62, 1);
+    color: white;
+    border: none;
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.sign-up:hover {
+    opacity: 0.8;
+}
