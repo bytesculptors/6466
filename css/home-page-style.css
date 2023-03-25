@@ -126,8 +126,7 @@ input {
     border-color: black;
 }
 .product {
-    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
-.photo-car {
-    width: 441px;
-}
+
