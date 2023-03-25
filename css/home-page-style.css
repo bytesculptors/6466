@@ -5,10 +5,10 @@
     top: 0;
 }
 .header {
-    margin-top: 10px;
+    padding-top: 10px;
     display: flex;
-    height: 60px;
-    /* background-color: rgb(78, 80, 79); */
+    height: 70px;
+    background-color: #fff;
 }
 .left-section {
     display: flex;
@@ -101,18 +101,19 @@
 }
 .empty-space {
     height: 60px;
-    background-color:chartreuse;
+    background-color:#fff;
 }
 .side-bar {
     /* margin-top: 160px; */
-    width: 150px;
+    width: 170px;
     height: 1000px;
-    background-color: aqua;
+    background-color: rgba(155, 237, 141, 1);
     position: fixed;
     left: 0;
     top: 130px;
 }
-.pick-type {
+.pick-type, .price {
+    margin-top: 10px;
     margin-left: 10px;
 }
 p {
@@ -123,4 +124,10 @@ input {
     margin-bottom: 10px;
     margin-right: 10px;
     border-color: black;
+}
+.product {
+    
+}
+.photo-car {
+    width: 441px;
 }
