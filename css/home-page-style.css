@@ -113,43 +113,53 @@
 } */
 .side-bar {
     /* margin-top: 160px; */
-    width: 170px;
-    height: 1000px;
+    width: 360px;
+    /* height: 5000px; */
+    height: 100%;
     background-color: #fff;
     position: fixed;
     left: 0;
     top: 80px;
+    color: #036532;
+}
+.vehicle-type {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
 }
 .pick-type, .price {
     margin-top: 10px;
     margin-left: 10px;
 }
+span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.car-lable > input {
+    visibility: hidden;
+}
+label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.thumbnail {
+    height: 80px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.fluid {
+    width: 100%;
+}
 p {
     margin-bottom: 10px;
     font-weight: bold;
 }
-input {
-    margin-bottom: 10px;
-    margin-right: 10px;
-    border-color: black;
-}
-.product {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 16px;
-    row-gap: 40px;
-}
-.car {
-    width: 100%;
-    background-color: #fff;
-}
-.car-detail {
-    display: grid;
-    grid-template-columns: 1fr 50px;
-    background-color: #fff;
-}
-.price-of-car {
-    font-size: 14px;
-    font-weight: 700;
-    color: #00a550;
-}
+
