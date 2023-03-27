@@ -7,8 +7,8 @@
 .header {
     padding-top: 10px;
     display: flex;
-    height: 70px;
-    background-color: #fff;
+    height: 80px;
+    background-color: #000;
 }
 .left-section {
     display: flex;
@@ -43,15 +43,17 @@
     /* background-color: lightblue; */
 }
 .cart-button {
-    background-color: rgba(18, 177, 62, 1);
+    background-color: #000;
+    /* border-color: rgba(18, 177, 62, 1);
+    border-style: solid; */
     border: none;
-    color: #fff;
+    color: rgba(18, 177, 62, 1);
     font-weight: bold;
     padding: 15px 20px;
     border-radius: 10px;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 0px 3px 8px #888888;
+    /* box-shadow: 0px 3px 8px #888888; */
 }
 .cart-button:hover {
     opacity: 0.6;
@@ -65,15 +67,17 @@
     /* background-color: lightcoral; */
 }
 .view-transaction-button {
-    background-color: rgba(18, 177, 62, 1);
+    background-color: #000;
+    /* border-color: rgba(18, 177, 62, 1);
+    border-style: solid; */
     border: none;
-    color: white;
+    color: rgba(18, 177, 62, 1);
     font-weight: bold;
     padding: 15px 20px;
     border-radius: 10px;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 0px 3px 8px #888888;
+    /* box-shadow: 0px 3px 8px #888888; */
 }
 .view-transaction-button:hover {
     opacity: 0.6;
@@ -87,30 +91,34 @@
     /* background-color: lightgreen; */
 }
 .log-in-button {
+    background-color: #000;
     border-color: rgba(18, 177, 62, 1);
     border-style: solid;
+    /* border: none; */
+    color: rgba(18, 177, 62, 1);
+    font-weight: bold;
     padding: 15px 20px;
     border-radius: 10px;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 0px 3px 8px #888888;
+    /* box-shadow: 0px 3px 8px #888888; */
 }
 .log-in-button:hover {
     background-color: rgba(18, 177, 62, 1);
-    color: #fff;
+    color: #000;
 }
-.empty-space {
+/* .empty-space {
     height: 60px;
     background-color:#fff;
-}
+} */
 .side-bar {
     /* margin-top: 160px; */
     width: 170px;
     height: 1000px;
-    background-color: rgba(155, 237, 141, 1);
+    background-color: #fff;
     position: fixed;
     left: 0;
-    top: 130px;
+    top: 80px;
 }
 .pick-type, .price {
     margin-top: 10px;
@@ -128,5 +136,20 @@ input {
 .product {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 40px;
 }
-
+.car {
+    width: 100%;
+    background-color: #fff;
+}
+.car-detail {
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    background-color: #fff;
+}
+.price-of-car {
+    font-size: 14px;
+    font-weight: 700;
+    color: #00a550;
+}
