@@ -13,7 +13,7 @@
     width: 30px;
 }
 :root {
-    --main-color: #fd4646;
+    --main-color: rgba(23, 186, 118, 0.8);
     --text-color: #171427;
     --bg-color: #fff;
 }
