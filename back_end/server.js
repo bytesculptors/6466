@@ -31,7 +31,7 @@ app.post('/signup', (req, res) => {
 app.post('/login',
     (req, res) => {
         const sql = "SELECT * FROM user WHERE user_name = ? AND pass_word = ?";
-        console.log(req);
+        //console.log(sql);
         db.query(sql, [req.body.userName, req.body.password], (err, data) => {
             const errors = validationResult(req);
             if (!errors.isEmpty()) {
@@ -39,7 +39,7 @@ app.post('/login',
             } else {
                 if (err) { return res.json("Error"); }
                 if (data.length > 0) {
-                    return res.json("Success");
+                    return res.json(data);
                 } else {
                     return res.json("Faile");
                 }

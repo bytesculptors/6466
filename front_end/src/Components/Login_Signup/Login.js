@@ -2,12 +2,16 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Validation from './LoginValidation'
 import axios from 'axios'
+import { useDispatch } from 'react-redux';
+import { setUser } from '../../Redux/userSlice';
 
 function Login() {
+    const dispatch = useDispatch();
     const [values, setValues] = useState({
         userName: '',
         password: ''
     })
+
     const navigate = useNavigate();
     const [errors, setErrors] = useState([])
     const [backendError, setBackendError] = useState([])
@@ -15,28 +19,34 @@ function Login() {
     const handleInput = (event) => {
         setValues(prev => ({ ...prev, [event.target.name]: [event.target.value] }))
     }
+
     const handleSubmit = (event) => {
         event.preventDefault();
         const err = Validation(values);
         setErrors(err);
+        // let check = false;
         if (err.userName === "" && err.password === "") {
             axios.post('http://localhost:8082/login', values)
                 .then(res => {
-                    console.log(res);
+                    console.log("user", res.data[0])
+                    
                     if (res.data.errors) {
                         setBackendError(res.data.errors);
                     } else {
                         setBackendError([]);
-                        if (res.data === "Success") {
-                            navigate('/home');
-                        } else {
+                        if (res.data === "Faile") {
                             alert("No record existed");
+                        } else {
+                            navigate("/");
+                            dispatch(setUser(res.data[0]));
+                            console.log("data", res.data[0]);
                         }
                     }
                 })
                 .catch(err => console.log(err));
         }
     }
+
     return (
         <div className='d-flex justify-content-center align-items-center bg-primary vh-100'>
             <div className='bg-white p-3 rounded w-25'>

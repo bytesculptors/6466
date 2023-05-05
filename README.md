@@ -4,3 +4,4 @@
 # install backend :
 # npm init -y
 # npm i express cors nodemon mysql
+# npm i redux react-redux @reduxjs/toolkit
