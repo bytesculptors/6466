@@ -1,0 +1,15 @@
+.social__link-icon {
+    text-decoration: none;
+    color: #069d59;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.contact__btn {
+    padding: 7px 15px;
+    background: #069d59;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
