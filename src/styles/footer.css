@@ -1,53 +1,94 @@
 .footer {
-    background: #069d59;
-    padding-top: 50px;
-    padding-bottom: 15px;
+  background: #095042;
+  padding-top: 50px;
+  padding-bottom: 15px;
 }
 
 .footer__logo i {
-    color: #fff;
-    font-weight: 400;
+  color: #fff;
+  font-weight: 400;
 }
 
 .footer__logo span {
-    color: #fff;
-    font-weight: 500;
+  color: #fff;
+  font-weight: 500;
 }
 
 .footer__logo-content {
-    color: rgba(255, 255, 255, 0.555);
-    margin-top: 15px;
-    line-height: 30px;
+  color: rgba(255, 255, 255, 0.715);
+  margin-top: 15px;
+  line-height: 30px;
 }
 
 .quick__link {
-    border: none !important;
-    background: transparent !important;
+  border: none !important;
+  background: transparent !important;
 }
 
-.quick__link a{
-    color: rgba(255, 255, 255, 0.555);
-    text-decoration: none;
-    font-weight: 300;
-    transition: 0.3s;
+.quick__link a {
+  color: rgba(255, 255, 255, 0.715);
+  text-decoration: none;
+  font-weight: 300;
+  transition: 0.3s;
 }
 
 .quick__link a:hover {
-    color: #f9a826;
+  color: #f9a826;
 }
 
 .footer__link-title {
-    color: #fff;
+  color: #fff;
 }
 
 .office__info {
-    color: rgba(255, 255, 255, 0.555);
-    font-weight: 300px;
+  color: rgba(255, 255, 255, 0.715);
+  font-weight: 300;
 }
+
+.newsletter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border: 1px solid #7c8a972f;
+  border-radius: 50px;
+  background: #095042;
+}
+
+.newsletter input {
+  background: transparent;
+  color: #fff;
+  border: none;
+  outline: none;
+}
+
+.newsletter span i {
+  color: #fff;
+}
+
 .footer__bottom {
-    border-top: 1px solid #7c8a972f;
-    color: #fff;
+  border-top: 1px solid #7c8a972f;
 }
-.footer__bottom i {
-    color: #fff;
+
+@media only screen and (max-width: 768px) {
+  .footer__logo-content {
+    font-size: 0.8rem;
+  }
+
+  .quick__link,
+  .office__info {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+
+  .footer__link-title {
+    font-size: 1rem;
+    margin-top: 15px;
+  }
+
+  .footer__bottom p {
+    font-size: 0.7rem;
+  }
+
+  
 }
