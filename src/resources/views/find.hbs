@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Website</title>
+    <link rel="stylesheet" href="../../../src/public/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="img/icon.png" type="image/png">
+</head>
+<body>
+    <header>
+        <div class="nav container1">
+            <div class="padding-space"></div>
+            <div class="logo">
+                <a href="/">
+                    <img src="img/1.png" alt="" class="photo-of-page">
+                </a>
+            </div>
+            <div class="empty-space"></div>
+            <!--Cart Icon-->
+            <i class='bx bxs-cart' id="cart-icon"></i>
+            <!--Cart-->
+            <div class="cart">
+                <h2 class="cart-title">Giỏ hàng</h2>
+                <!--Content-->
+                <div class="cart-content">
+                    
+                </div>
+                <!--Total-->
+                <div class="total">
+                    <div class="total-title">Tổng</div>
+                    <div class="total-price">0đ</div>
+                </div>
+                <!--Buy button-->
+                <button type="button" class="btn-buy">Xác nhận</button>
+                <!--Cart close-->
+                <i class='bx bx-x' id="close-cart"></i>
+            </div>
+            <a href="/">
+                <i class='bx bxs-log-in-circle' id="log-in-btn"></i>
+            </a>
+        </div>
+    </header>
+    <div class="side-bar">
+        <div class="option">
+            <div class="square-four-have-lable">
+                <input type="checkbox" name="vt_4" id="vt_4" value="">
+                <label for="vt_4" class="description">
+                    <div class="thumbnail">
+                        <img src="img/4-seat.png" class="img-fluid" alt="">
+                    </div>
+                    <span>4 chỗ</span>
+                </label>
+            </div>
+            <div class="square-four-have-lable">
+                <input type="checkbox" name="vt_7" id="vt_7" value="">
+                <label for="vt_7" class="description">
+                    <div class="thumbnail">
+                        <img src="img/7-seat.png" class="img-fluid" alt="">
+                    </div>
+                    <span>7 chỗ</span>
+                </label>
+            </div>
+            <div class="square-four-have-lable">
+                <input type="checkbox" name="vt_16" id="vt_16" value="">
+                <label for="vt_16" class="description">
+                    <div class="thumbnail">
+                        <img src="img/16-seat.png" class="img-fluid" alt="">
+                    </div>
+                    <span>16 chỗ</span>
+                </label>
+            </div>
+            <div class="square-four-have-lable">
+                <input type="checkbox" name="vt_29" id="vt_29" value="">
+                <label for="vt_29" class="description">
+                    <div class="thumbnail">
+                        <img src="img/29-seat.png" class="img-fluid" alt="">
+                    </div>
+                    <span>29 chỗ</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <section class="shop container">
+        <h2 class="section-title">Các loại xe</h2>
+        <div class="shop-content">
+            <!--Product 1-->
+            <div class="product-box">
+                <img src="img/car-1.jpg" alt="" class="product-img">
+                <h2 class="product-title">Car 1</h2>
+                <span class="price">500000đ</span>
+                <i class='bx bxs-cart add-cart'></i>
+            </div>
+            <!--Product 2-->
+            <div class="product-box">
+                <img src="img/car-2.jpg" alt="" class="product-img">
+                <h2 class="product-title">Car 2</h2>
+                <span class="price">450000đ</span>
+                <i class='bx bxs-cart add-cart'></i>
+            </div>
+            <!--Product 3-->
+            <div class="product-box">
+                <img src="img/car-3.jpg" alt="" class="product-img">
+                <h2 class="product-title">Car 3</h2>
+                <span class="price">505000đ</span>
+                <i class='bx bxs-cart add-cart'></i>
+            </div>
+            <!--Product 4-->
+            <div class="product-box">
+                <img src="img/car-4.jpg" alt="" class="product-img">
+                <h2 class="product-title">Car 4</h2>
+                <span class="price">600000đ</span>
+                <i class='bx bxs-cart add-cart'></i>
+            </div>
+            <!--Product 5-->
+            <div class="product-box">
+                <img src="img/car-5.jpg" alt="" class="product-img">
+                <h2 class="product-title">Car 5</h2>
+                <span class="price">1000000đ</span>
+                <i class='bx bxs-cart add-cart'></i>
+            </div>
+            <!--Product 6-->
+            <div class="product-box">
+                <img src="img/car-6.jpg" alt="" class="product-img">
+                <h2 class="product-title">Car 6</h2>
+                <span class="price">850000đ</span>
+                <i class='bx bxs-cart add-cart'></i>
+            </div>
+            <!--Product 7-->
+            <div class="product-box">
+                <img src="img/car-7.jpg" alt="" class="product-img">
+                <h2 class="product-title">Car 7</h2>
+                <span class="price">750000đ</span>
+                <i class='bx bxs-cart add-cart'></i>
+            </div>
+            <!--Product 8-->
+            <div class="product-box">
+                <img src="img/car-8.jpg" alt="" class="product-img">
+                <h2 class="product-title">Car 8</h2>
+                <span class="price">350000đ</span>
+                <i class='bx bxs-cart add-cart'></i>
+            </div>
+        </div>
+    </section>
+    <!--Link to JS-->
+    <script src="js/main.js"></script>
+    <script src="js/option.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/public/css/log-in-style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Log in</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h1 id="title">Đăng ký</h1>
+            <form action="">
+                <div class="input-group">
+                    <div class="input-field" id="nameField">
+                        <i class='bx bxs-user' ></i>
+                        <input type="text" placeholder="Họ tên">
+                    </div>
+
+                    <div class="input-field" id="phone">
+                        <i class='bx bxs-phone-call' ></i>
+                        <input type="text" placeholder="Số điện thoại">
+                    </div>
+
+                    <div class="input-field" id="house">
+                        <i class='bx bxs-building-house'></i>
+                        <input type="text" placeholder="Địa chỉ">
+                    </div>
+
+                    <div class="input-field">
+                        <i class='bx bxs-envelope'></i>
+                        <input type="text" placeholder="Email">
+                    </div>
+
+                    <div class="input-field">
+                        <i class='bx bxs-lock-alt' ></i>
+                        <input type="password" placeholder="Mật khẩu">
+                    </div>
+                    <p>Quên mật khẩu <a href="#">Ấn vào đây!</a></p>
+                </div>
+                <div class="btn-field">
+                    <button type="button" id="signupBtn">Đăng ký</button>
+                    <button type="button" id="signinBtn" class="disable">Đăng nhập</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let signupBtn = document.getElementById("signupBtn");
+        let signinBtn = document.getElementById("signinBtn");
+        let nameField = document.getElementById("nameField");
+        let phone = document.getElementById("phone");
+        let house = document.getElementById("house");
+        let title = document.getElementById("title");
+
+        signinBtn.onclick = function() {
+            nameField.style.maxHeight = "0";
+            phone.style.maxHeight = "0";
+            house.style.maxHeight = "0";
+            title.innerHTML = "Đăng nhập";
+            signupBtn.classList.add("disable");
+            signinBtn.classList.remove("disable");
+        }
+
+        signupBtn.onclick = function() {
+            nameField.style.maxHeight = "60px";
+            phone.style.maxHeight = "60px";
+            house.style.maxHeight = "60px";
+            title.innerHTML = "Đăng ký";
+            signinBtn.classList.add("disable");
+            signupBtn.classList.remove("disable");
+        }
+    </script>
+</body>
+</html>
