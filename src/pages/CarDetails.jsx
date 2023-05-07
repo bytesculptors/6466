@@ -31,19 +31,8 @@ const CarDetails = () => {
 
                 <div className=" d-flex align-items-center gap-5 mb-4 mt-3">
                   <h6 className="rent__price fw-bold fs-4">
-                    ${singleCarItem.price}.00 / Day
+                    {singleCarItem.price} VNĐ / Ngày
                   </h6>
-
-                  <span className=" d-flex align-items-center gap-2">
-                    <span style={{ color: "#f9a826" }}>
-                      <i class="ri-star-s-fill"></i>
-                      <i class="ri-star-s-fill"></i>
-                      <i class="ri-star-s-fill"></i>
-                      <i class="ri-star-s-fill"></i>
-                      <i class="ri-star-s-fill"></i>
-                    </span>
-                    ({singleCarItem.rating} ratings)
-                  </span>
                 </div>
 
                 <p className="section__description">
@@ -54,13 +43,13 @@ const CarDetails = () => {
                   className=" d-flex align-items-center mt-3"
                   style={{ columnGap: "4rem" }}
                 >
-                  <span className=" d-flex align-items-center gap-1 section__description">
+                  {/* <span className=" d-flex align-items-center gap-1 section__description">
                     <i
                       class="ri-roadster-line"
                       style={{ color: "#f9a826" }}
                     ></i>{" "}
                     {singleCarItem.model}
-                  </span>
+                  </span> */}
 
                   <span className=" d-flex align-items-center gap-1 section__description">
                     <i
@@ -84,8 +73,8 @@ const CarDetails = () => {
                   style={{ columnGap: "2.8rem" }}
                 >
                   <span className=" d-flex align-items-center gap-1 section__description">
-                    <i class="ri-map-pin-line" style={{ color: "#f9a826" }}></i>{" "}
-                    {singleCarItem.gps}
+                    <i class="ri-gas-station-fill" style={{ color: "#f9a826" }}></i>{" "}
+                    {singleCarItem.fuel}
                   </span>
 
                   <span className=" d-flex align-items-center gap-1 section__description">
@@ -109,14 +98,14 @@ const CarDetails = () => {
 
             <Col lg="7" className="mt-5">
               <div className="booking-info mt-5">
-                <h5 className="mb-4 fw-bold ">Booking Information</h5>
+                <h5 className="mb-4 fw-bold ">Thông tin đặt hàng</h5>
                 <BookingForm />
               </div>
             </Col>
 
             <Col lg="5" className="mt-5">
               <div className="payment__info mt-5">
-                <h5 className="mb-4 fw-bold ">Payment Information</h5>
+                <h5 className="mb-4 fw-bold ">Thông tin thanh toán</h5>
                 <PaymentMethod />
               </div>
             </Col>
