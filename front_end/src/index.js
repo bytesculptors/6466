@@ -6,16 +6,33 @@ import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { store, persistor } from './Redux/store';
 import { PersistGate } from 'redux-persist/integration/react';
-import { useDispatch } from 'react-redux';
-import { clearUser } from './Redux/userSlice';
+import 'remixicon/fonts/remixicon.css'
+// import { useDispatch } from 'react-redux';
+// import { clearUser } from './Redux/userSlice';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-window.addEventListener('beforeunload', () => {
-  store.dispatch(clearUser());
-  window.localStorage.clear();
-});
+
+// let isAppClosing = false;
+
+// window.addEventListener('beforeunload', (event) => {
+//   if (!isAppClosing) {
+//     // Ngăn chặn hiển thị thông báo xác nhận rời khỏi trang
+//     event.preventDefault();
+
+//     // Lưu trạng thái "app đang đóng"
+//     isAppClosing = true;
+
+//     // Xóa dữ liệu người dùng
+//     store.dispatch(clearUser());
+//     window.localStorage.clear();
+
+//     // Đóng trình duyệt
+//     window.close();
+//   }
+// });
+
 
 console.log(1);
 root.render(
