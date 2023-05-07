@@ -28,7 +28,7 @@ function Login() {
         if (err.userName === "" && err.password === "") {
             axios.post('http://localhost:8082/login', values)
                 .then(res => {
-                    console.log("user", res.data[0])
+                    console.log("data", res.data[0])
                     
                     if (res.data.errors) {
                         setBackendError(res.data.errors);

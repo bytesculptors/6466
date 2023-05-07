@@ -6,6 +6,8 @@ import Login from './Components/Login_Signup/Login';
 import Signup from './Components/Login_Signup/Signup';
 import Home from './Components/Home/Home';
 import { useSelector } from 'react-redux';
+import { CarDataProvider } from './Components/data/CarDataContext';
+import CarsData from './Components/data/CarsData';
 
 
 function App() {
@@ -27,14 +29,16 @@ function App() {
   // }, [dispatch]);
 
   return (
-    <BrowserRouter>
-      <Routes>
-
-        <Route path='*' element={user.access === 'admin' ? <Admin /> : <Home />}></Route>
-        <Route path='/login' element={<Login />}></Route>
-        <Route path='/signup' element={<Signup />}></Route>
-      </Routes>
-    </BrowserRouter>
+    <CarDataProvider>
+      <CarsData/>
+      <BrowserRouter>
+        <Routes>
+          <Route path='*' element={user.access === 'admin' ? <Admin /> : <Home />}></Route>
+          <Route path='/login' element={<Login />}></Route>
+          <Route path='/signup' element={<Signup />}></Route>
+        </Routes>
+      </BrowserRouter>
+    </CarDataProvider>
   );
 }
 

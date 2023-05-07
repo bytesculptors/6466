@@ -46,4 +46,14 @@ app.post('/login',
             }
         })
     })
+
+app.post('/dashboard', (req,res) => {
+    const sql = "SELECT * FROM cars";
+    db.query(sql, (err, data) => {
+        if (err) {
+            return res.json("Error");
+        }
+        return res.json(data);
+    })
+})
 app.listen(8082, () => { console.log("listening"); })

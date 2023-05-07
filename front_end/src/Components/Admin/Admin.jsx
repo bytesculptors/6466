@@ -11,9 +11,9 @@ import Setting from './Pages/Setting';
 function Admin() {
   return (
     <div className='layout'>
-      <Sidebar/>
+      {/* <Sidebar/> */}
       <div className='main_layout'>
-        <TopNav/>
+        {/* <TopNav/> */}
         <div className='content'>
           <Routes>
             <Route path='/' element = {<Navigate to = 'dashboard' element = {<Dashboard/>} />}></Route>

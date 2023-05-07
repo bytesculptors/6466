@@ -9,6 +9,7 @@ const initialState = {
   phone_number: "",
   citizenID: "",
   access: "",
+  user_images:"",
 };
 
 const userSlice = createSlice({
@@ -24,6 +25,7 @@ const userSlice = createSlice({
       state.phone_number = action.payload.phone_number;
       state.citizenID = action.payload.citizenID;
       state.access = action.payload.access;
+      state.user_images = action.payload.user_images
     },
     clearUser: (state) => {
       Object.assign(state, initialState);
