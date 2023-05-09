@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Container, Row, Col, Form, FormGroup, Input } from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
 
@@ -28,16 +28,16 @@ const socialLinks = [
 const Contact = () => {
   return (
     <Helmet title="Contact">
-      <CommonSection title="Contact" />
+      <CommonSection title="Liên hệ" />
       <section>
         <Container>
           <Row>
-            <Col lg="7" md="7">
-              <h6 className="fw-bold mb-4">Get In Touch</h6>
+            {/* <Col lg="7" md="7">
+              <h6 className="fw-bold mb-4">Liên hệ</h6>
 
               <Form>
                 <FormGroup className="contact__form">
-                  <Input placeholder="Your Name" type="text" />
+                  <Input placeholder="Tên" type="text" />
                 </FormGroup>
                 <FormGroup className="contact__form">
                   <Input placeholder="Email" type="email" />
@@ -45,34 +45,34 @@ const Contact = () => {
                 <FormGroup className="contact__form">
                   <textarea
                     rows="5"
-                    placeholder="Message"
+                    placeholder="Ghi chú"
                     className="textarea"
                   ></textarea>
                 </FormGroup>
 
                 <button className=" contact__btn" type="submit">
-                  Send Message
+                  Gửi tin nhắn
                 </button>
               </Form>
-            </Col>
+            </Col> */}
 
             <Col lg="5" md="5">
               <div className="contact__info">
-                <h6 className="fw-bold">Contact Information</h6>
+                <h6 className="fw-bold">Thông tin liên hệ</h6>
                 <p className="section__description mb-0">
-                  123 ZindaBazar, Sylhet, Bangladesh
+                  Cầu Giấy, Hà Nội, Việt Nam
                 </p>
                 <div className=" d-flex align-items-center gap-2">
-                  <h6 className="fs-6 mb-0">Phone:</h6>
-                  <p className="section__description mb-0">+88683896366</p>
+                  <h6 className="fs-6 mb-0">Điện thoại:</h6>
+                  <p className="section__description mb-0">+84 384103659</p>
                 </div>
 
                 <div className=" d-flex align-items-center gap-2">
                   <h6 className="mb-0 fs-6">Email:</h6>
-                  <p className="section__description mb-0">example@gmail.com</p>
+                  <p className="section__description mb-0">tuannghia200603@gmail.com</p>
                 </div>
 
-                <h6 className="fw-bold mt-4">Follow Us</h6>
+                <h6 className="fw-bold mt-4">Theo dõi chúng tôi</h6>
 
                 <div className=" d-flex align-items-center gap-4 mt-3">
                   {socialLinks.map((item, index) => (
