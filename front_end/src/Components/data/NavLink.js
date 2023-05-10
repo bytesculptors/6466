@@ -10,14 +10,9 @@ const navLinks = [
       display: "Booking",
     },
     {
-      path: "/sell-car",
-      icon: "ri-shopping-bag-line",
-      display: "Sell Cars",
-    },
-    {
-      path: "/settings",
-      icon: "ri-settings-2-line",
-      display: "Settings",
+      path: "/profile",
+      icon: "ri-user-3-line",
+      display: "Profile",
     },
   ];
   

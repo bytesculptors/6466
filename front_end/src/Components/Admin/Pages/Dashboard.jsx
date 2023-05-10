@@ -7,9 +7,6 @@ function Dashboard() {
 
   const { carData } = useContext(CarDataContext);
   const { userData } = useContext(UserContext);
-  useEffect(() => {
-    console.log("user", userData);
-  }, [userData])
   const dataLength = carData ? carData.length : 0;
   const [showCarTable, setShowCarTable] = useState(true);
   const toggleTable = () => {
@@ -36,7 +33,7 @@ function Dashboard() {
     axios.post('http://localhost:8082/dashboard', newCar)
       .then(response => {
         console.log(response);
-        window.location.reload()
+        window.location.reload();
       })
       .catch(error => {
         console.error('Error adding car:', error);

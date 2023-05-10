@@ -93,4 +93,33 @@ app.post('/booking',
             })
         }
     })
+
+
+app.post("/profile",
+    (req, res) => {
+        const newUser = req.body;
+
+        const sql = "UPDATE `user` SET `user_name` = ?, `pass_word` = ?, `user_email` = ?, `full_name` = ?, `phone_number` = ?, `citizenID` = ?, `user_images` = ? WHERE `user_name` = ?";
+
+        const values = [
+            newUser.user_name,
+            newUser.pass_word,
+            newUser.user_email,
+            newUser.full_name,
+            newUser.phone_number,
+            newUser.citizenID,
+            newUser.user_images,
+            newUser.user_id
+        ];
+        db.query(sql, values, (err, data) => {
+            if (err) {
+                console.log(err);
+                return res.json("Cap nhat that bai");
+            } else {
+                console.log(1);
+                return res.json("Success");
+            }
+        })
+
+    })
 app.listen(8082, () => { console.log("listening"); })

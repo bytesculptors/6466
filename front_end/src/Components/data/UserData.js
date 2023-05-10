@@ -8,7 +8,6 @@ function UserData() {
   const fetchData = () => {
     axios.post('http://localhost:8082/dashboard', {key: "get User Data"})
       .then(res => {
-        console.log("data", res.data)
         setUserData(res.data);
       })
       .catch(err => console.log(err));
