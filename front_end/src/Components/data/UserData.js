@@ -1,14 +1,15 @@
 import React, { useContext } from "react";
 import axios from "axios";
-import { CarDataContext } from "./CarDataContext";
+import { UserContext } from "./UserContext";
 import { useEffect } from "react";
 
-function CarsData() {
-  const { carData, setCarData } = useContext(CarDataContext);
+function UserData() {
+  const { userData, setUserData } = useContext(UserContext);
   const fetchData = () => {
-    axios.post('http://localhost:8082/dashboard', {key: "get Car Data"})
+    axios.post('http://localhost:8082/dashboard', {key: "get User Data"})
       .then(res => {
-        setCarData(res.data);
+        console.log("data", res.data)
+        setUserData(res.data);
       })
       .catch(err => console.log(err));
   };
@@ -27,4 +28,4 @@ function CarsData() {
   );
 }
 
-export default CarsData
+export default UserData

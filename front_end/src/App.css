@@ -23,7 +23,7 @@
 body {
     font-family: "DM Sans", sans-serif;
     background: var(--body-bg);
-    color: #e3ecf1;
+    color: #12425d;
 }
 
 ul{
@@ -37,4 +37,5 @@ a{
 
 .main__layout{
     margin-left: 270px;
+    background-color: var(--body-bg);
 }
