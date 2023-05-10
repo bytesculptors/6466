@@ -67,7 +67,7 @@ app.post('/dashboard', (req, res) => {
             }
             return res.json(data);
         })
-    } else{
+    } else {
         const sql = 'INSERT INTO `cars`(`brand`, `model`, `year`, `tranmission`, `num_seats`, `fuel_type`, `price_per_day`, `image`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
         db.query(sql, [req.body.brand, req.body.model, req.body.year, req.body.transmission, req.body.num_seats, req.body.fuel_type, req.body.price_per_day, req.body.image], (err, data) => {
             if (err) {
@@ -78,4 +78,19 @@ app.post('/dashboard', (req, res) => {
         })
     }
 })
+
+app.post('/booking',
+    (req, res) => {
+        if (req.body.key === "get Booking Data") {
+            const sql = "SELECT * FROM `bookings` ";
+            db.query(sql, (err, data) => {
+                if (err) {
+                    console.log(err);
+                    return res.json("get Booking Data Error!");
+                } else {
+                    return res.json(data);
+                }
+            })
+        }
+    })
 app.listen(8082, () => { console.log("listening"); })

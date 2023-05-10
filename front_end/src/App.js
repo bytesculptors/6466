@@ -8,8 +8,10 @@ import Home from './Components/Home/Home';
 import { useSelector } from 'react-redux';
 import { CarDataProvider } from './Components/data/CarDataContext';
 import CarsData from './Components/data/CarsData';
-import {UserDataProvider } from './Components/data/UserContext';
+import { UserDataProvider } from './Components/data/UserContext';
 import UserData from './Components/data/UserData';
+import { BookingDataProvider } from './Components/data/BookingContext';
+import BookingData from './Components/data/BookingData';
 
 
 function App() {
@@ -33,15 +35,18 @@ function App() {
   return (
     <CarDataProvider>
       <UserDataProvider>
-        <CarsData />
-        <UserData />
-        <BrowserRouter>
-          <Routes>
-            <Route path='*' element={user.access === 'admin' ? <Admin /> : <Home />}></Route>
-            <Route path='/login' element={<Login />}></Route>
-            <Route path='/signup' element={<Signup />}></Route>
-          </Routes>
-        </BrowserRouter>
+        <BookingDataProvider>
+          <CarsData />
+          <UserData />
+          <BookingData/>
+          <BrowserRouter>
+            <Routes>
+              <Route path='*' element={user.access === 'admin' ? <Admin /> : <Home />}></Route>
+              <Route path='/login' element={<Login />}></Route>
+              <Route path='/signup' element={<Signup />}></Route>
+            </Routes>
+          </BrowserRouter>
+        </BookingDataProvider>
       </UserDataProvider>
     </CarDataProvider>
   );
