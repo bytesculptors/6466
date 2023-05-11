@@ -17,6 +17,7 @@ import BookingData from './Components/data/BookingData';
 function App() {
   // const dispatch = useDispatch();
   const user = useSelector(state => state.user);
+  console.log(user);
   
 
   // useEffect(() => {

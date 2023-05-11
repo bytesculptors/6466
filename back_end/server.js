@@ -99,7 +99,8 @@ app.post("/profile",
     (req, res) => {
         const newUser = req.body;
 
-        const sql = "UPDATE `user` SET `user_name` = ?, `pass_word` = ?, `user_email` = ?, `full_name` = ?, `phone_number` = ?, `citizenID` = ?, `user_images` = ? WHERE `user_name` = ?";
+        const sql = "UPDATE `user` SET `user_name` = ?, `pass_word` = ?, `user_email` = ?, `full_name` = ?, `phone_number` = ?, `citizenID` = ?, `user_images` = ?, `address` = ? WHERE `user_name` = ?";
+
 
         const values = [
             newUser.user_name,
@@ -109,8 +110,10 @@ app.post("/profile",
             newUser.phone_number,
             newUser.citizenID,
             newUser.user_images,
-            newUser.user_id
+            newUser.address,
+            newUser.user_name,
         ];
+        // console.log(values);
         db.query(sql, values, (err, data) => {
             if (err) {
                 console.log(err);
