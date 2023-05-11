@@ -40,7 +40,7 @@ function Setting() {
 
   return (
     <div className='profile_data'>
-      <form onSubmit={handleSubmit} className='user_info'>
+      <form onSubmit={handleSubmit} className='user_info1'>
         <img className = "avatar" src={user.user_images}/>
         <div className='label'><label htmlFor="user_name">Tên người dùng:</label></div>
         <input className='input' type="text" id="user_name" name="user_name" value={user.user_name} onChange={handleInputChange} /><br /><br />

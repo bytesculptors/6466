@@ -63,12 +63,10 @@
 }
 
 .user_details {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 100px 1fr;
   align-items: center;
   padding: 20px;
-  width: 507px;
-  height: 150px;
   border: 1px solid #ccc;
   border-radius: 5px;
   gap: 20px;
@@ -80,11 +78,11 @@
   height: 100px;
   flex: 0 0 auto;
   margin-right: 10px;
-  /* margin-bottom: 10px; */
+  margin-bottom: 80px;
 }
 
-.user_details p {
-  margin-bottom: 5px;
-  flex: 1 1 auto;
+.info p span{
+  font-size: 0.9rem;
+  color: rgb(204, 40, 40);
+  text-shadow: 0ch;
 }
-

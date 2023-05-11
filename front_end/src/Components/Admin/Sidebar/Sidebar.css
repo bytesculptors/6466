@@ -90,3 +90,7 @@
     padding:  6px;
     border-radius: 5px;
 }
+.nav-item a{
+    text-decoration: none;
+    color: var(--small-text-color);
+}

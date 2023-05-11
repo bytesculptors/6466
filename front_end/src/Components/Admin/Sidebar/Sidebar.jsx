@@ -36,7 +36,7 @@ function Sidebar() {
                     <NavLink to={item.path} className={navClass => navClass
                       .isActive ? 'nav_active nav_link' : 'nav_link'}>
                       <i className={item.icon}></i>
-                      {item.display}
+                      <span>{item.display}</span>
                     </NavLink>
                   </li>
                 ))

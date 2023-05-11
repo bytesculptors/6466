@@ -173,12 +173,27 @@ function Dashboard() {
         {userData && userData.map((user) => (
           <div key={user.user_id} className="user_details">
             <img src={user.user_images} alt="User Image" />
-            <div>
-              <p>Email: {user.user_email}</p>
-              <p>Phone Number: {user.phone_number}</p>
-              <p>Date of Birth: {user.date_of_birth}</p>
-              <p>Full Name: {user.full_name}</p>
-              <p>Address: {user.address}</p>
+            <div className='info'>
+              <p>
+                <span>Email: </span>
+                {user.user_email}
+              </p>
+              <p>
+                <span>Phone Number: </span>
+                {user.phone_number}
+              </p>
+              <p>
+                <span>Date of Birth: </span>
+                {user.date_of_birth}
+              </p>
+              <p>
+                <span>Full Name: </span>
+                {user.full_name}
+              </p>
+              <p>
+                <span>Address: </span>
+                {user.address}
+              </p>
             </div>
           </div>
         ))}
