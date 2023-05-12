@@ -7,6 +7,7 @@ function Dashboard() {
 
   const { carData } = useContext(CarDataContext);
   const { userData } = useContext(UserContext);
+  console.log(userData);
   const dataLength = carData ? carData.length : 0;
   const [showCarTable, setShowCarTable] = useState(true);
   const toggleTable = () => {
@@ -182,10 +183,12 @@ function Dashboard() {
                 <span>Phone Number: </span>
                 {user.phone_number}
               </p>
-              <p>
-                <span>Date of Birth: </span>
-                {user.date_of_birth}
-              </p>
+              {user.date_of_birth && (
+                <p>
+                  <span>Date of Birth: </span>
+                  {new Date(user.date_of_birth).toISOString().slice(0, 10)}
+                </p>
+              )}
               <p>
                 <span>Full Name: </span>
                 {user.full_name}
