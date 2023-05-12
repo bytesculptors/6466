@@ -49,13 +49,13 @@ function Setting() {
         <input className='input' type="password" id="pass_word" name="pass_word" value={user.pass_word} onChange={handleInputChange} /><br /><br />
 
         <div className='label'><label htmlFor="user_email">Email:</label></div>
-        <input className='input' type="email" id="user_email" name="user_email" value={user.user_email} onChange={handleInputChange} /><br /><br />
+        <input className='input readOnly' type="email" id="user_email" name="user_email" value={user.user_email} onChange={handleInputChange} readOnly /><br /><br />
 
         <div className='label'><label htmlFor="full_name">Họ và tên:</label></div>
-        <input className='input' type="text" id="full_name" name="full_name" value={user.full_name} onChange={handleInputChange} /><br /><br />
+        <input className='input readOnly' type="text" id="full_name" name="full_name" value={user.full_name} onChange={handleInputChange} readOnly/><br /><br />
 
         <div className='label'><label htmlFor="citizenID">Số CMND:</label></div>
-        <input className='input' type="text" id="citizenID" name="citizenID" value={user.citizenID} onChange={handleInputChange} /><br /><br />
+        <input className='input readOnly' type="text" id="citizenID" name="citizenID" value={user.citizenID} onChange={handleInputChange} readOnly/><br /><br />
 
         <div className='label'><label htmlFor="phone_number">Số điện thoại:</label></div>
         <input className='input' type="text" id="phone_number" name="phone_number" value={user.phone_number} onChange={handleInputChange} /><br /><br />

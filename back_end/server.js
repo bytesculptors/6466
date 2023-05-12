@@ -82,7 +82,11 @@ app.post('/dashboard', (req, res) => {
 app.post('/booking',
     (req, res) => {
         if (req.body.key === "get Booking Data") {
-            const sql = "SELECT * FROM `bookings` ";
+            const sql =
+                `SELECT b.start_date, b.end_date, b.total_price, c.brand, c.model, u.full_name, u.user_email
+                FROM bookings b
+                JOIN cars c ON b.car_id = c.car_id
+                JOIN user u ON b.user_id = u.user_id`;
             db.query(sql, (err, data) => {
                 if (err) {
                     console.log(err);

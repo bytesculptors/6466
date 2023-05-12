@@ -18,7 +18,7 @@ function Admin() {
           <Routes>
             <Route path='/' element = {<Navigate to = 'dashboard' element = {<Dashboard/>} />}></Route>
             <Route path='dashboard' element = {<Dashboard/>}></Route>
-            <Route path='booking' element = {<Booking/>}></Route>
+            <Route path='bookings' element = {<Booking/>}></Route>
             <Route path='profile' element = {<Setting/>}></Route>
           </Routes>
         </div>
