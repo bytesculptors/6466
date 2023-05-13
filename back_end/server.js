@@ -67,7 +67,17 @@ app.post('/dashboard', (req, res) => {
             }
             return res.json(data);
         })
-    } else {
+    } else if (req.body.key === "delete car") {
+        const sql = "DELETE FROM `cars` WHERE car_id = ?";
+        console.log(req.body)
+        db.query(sql, req.body.value.car_id, (err, data)=> {
+            if (err) {
+                console.log(err);
+                return res.json("Error");
+            }
+            return res.json(data)
+        })
+    }else {
         const sql = 'INSERT INTO `cars`(`brand`, `model`, `year`, `tranmission`, `num_seats`, `fuel_type`, `price_per_day`, `image`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
         db.query(sql, [req.body.brand, req.body.model, req.body.year, req.body.transmission, req.body.num_seats, req.body.fuel_type, req.body.price_per_day, req.body.image], (err, data) => {
             if (err) {

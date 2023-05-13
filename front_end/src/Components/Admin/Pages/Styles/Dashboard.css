@@ -42,12 +42,12 @@
 }
 
 .add_car_button {
-  position: absolute;
+  position: flex;
   border-radius: 10%;
   background-color: aquamarine;
 }
 .total_user {
-  position: absolute;
+  position: flex;
   bottom: 10px;
   font-size: 2rem;
 }
@@ -81,8 +81,22 @@
   margin-bottom: 80px;
 }
 
-.info p span{
+.info p span {
   font-size: 0.9rem;
   color: rgb(204, 40, 40);
   text-shadow: 0ch;
+}
+
+.delete_button {
+  position: flex;
+  /* margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 8px;
+  text-indent: 0px; */
+  /* height: 40.7px; */
 }

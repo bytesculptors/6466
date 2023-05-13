@@ -30,6 +30,15 @@ function Dashboard() {
     setNewCar({ ...newCar, [name]: value });
   };
 
+  const handleDelete = (car) => {
+    axios.post('http://localhost:8082/dashboard', {key: "delete car", value: car})
+      .then(res => {
+        console.log("compelte delete");
+        window.location.reload();
+      })
+      .catch(err => console.log(err));
+  }
+
   const handleAddCar = () => {
     axios.post('http://localhost:8082/dashboard', newCar)
       .then(response => {
@@ -63,6 +72,7 @@ function Dashboard() {
               <th>Fuel Type</th>
               <th>Price per Day</th>
               <th>Image</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -76,6 +86,12 @@ function Dashboard() {
                 <td>{car.fuel_type}</td>
                 <td>{car.price_per_day.toLocaleString("vi-VN")}</td>
                 <td className='car_image'>  <a href={car.image}> Image Link</a></td>
+                <td className='delete_button'>
+                  <button onClick={ () => handleDelete(car)}>
+                    <i class="ri-delete-bin-line"></i>
+                    Delete
+                  </button>
+                </td>
               </tr>
             ))}
             <tr>
