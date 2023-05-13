@@ -7,15 +7,15 @@ const BookingForm = () => {
     event.preventDefault();
   };
   return (
-    <div>
+    <div className="d-flex flex-column align-items-start mb-5">
       <Form className="d-flex" onSubmit={submitHandler}>
         <FormGroup className="booking__form d-inline-block me-4 mb-4">
-          <h4>Ngày nhận</h4>
+          <h6>Ngày nhận</h6>
           <input type="date" placeholder="Ngày nhận" />
         </FormGroup>
 
         <FormGroup className="booking__form d-inline-block me-4 mb-4">
-          <h4>Ngày trả</h4>
+          <h6>Ngày trả</h6>
           <input type="date" placeholder="Ngày trả" />
         </FormGroup>
       </Form>
