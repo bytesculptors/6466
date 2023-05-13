@@ -8,7 +8,7 @@ const BookingForm = () => {
   };
   return (
     <Form onSubmit={submitHandler}>
-      <FormGroup className="booking__form d-inline-block me-4 mb-4">
+      {/* <FormGroup className="booking__form d-inline-block me-4 mb-4">
         <input type="text" placeholder="Họ" />
       </FormGroup>
       <FormGroup className="booking__form d-inline-block ms-1 mb-4">
@@ -27,9 +27,9 @@ const BookingForm = () => {
       </FormGroup>
       <FormGroup className="booking__form d-inline-block ms-1 mb-4">
         <input type="text" placeholder="Địa điểm đến" />
-      </FormGroup>
+      </FormGroup> */}
 
-      <FormGroup className="booking__form d-inline-block me-4 mb-4">
+      {/* <FormGroup className="booking__form d-inline-block me-4 mb-4">
         <select name="" id="">
           <option value="1 person">1 Người</option>
           <option value="2 person">2 Người</option>
@@ -46,18 +46,24 @@ const BookingForm = () => {
           <option value="4 luggage">4 Hành lý</option>
           <option value="5+ luggage">5 Hành lý trở lên</option>
         </select>
+      </FormGroup> */}
+
+      <FormGroup className="booking__form d-inline-block me-4 mb-4">
+        <h4>Ngày nhận</h4>
+        <input type="date" placeholder="Ngày nhận" />
       </FormGroup>
 
       <FormGroup className="booking__form d-inline-block me-4 mb-4">
-        <input type="date" placeholder="Ngày đi" />
+        <h4>Ngày trả</h4>
+        <input type="date" placeholder="Ngày trả" />
       </FormGroup>
-      <FormGroup className="booking__form d-inline-block ms-1 mb-4">
+      {/* <FormGroup className="booking__form d-inline-block ms-1 mb-4">
         <input
           type="time"
           placeholder="Giờ đi"
           className="time__picker"
         />
-      </FormGroup>
+      </FormGroup> */}
 
       <FormGroup>
         <textarea
@@ -67,6 +73,9 @@ const BookingForm = () => {
           placeholder="Ghi chú"
         ></textarea>
       </FormGroup>
+      <div className="payment text-end mt-5">
+        <button>Reserve Now</button>
+      </div>
     </Form>
   );
 };

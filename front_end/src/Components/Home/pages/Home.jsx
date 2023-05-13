@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <Helmet title="Home">
       {/* ============= hero section =========== */}
-      <section className="p-0 hero__slider-section">
+      <section className="p-0 hero__slider-section mb-5">
         <HeroSlider />
       </section>
       {/* =========== about section ================ */}
