@@ -1,6 +1,6 @@
 # 6466
 # install front_end :
-# npm i react reat-router react-bootstrap bootstrap react-router-dom axios
+# npm i react reat-router react-bootstrap bootstrap react-router-dom axios reactstrap
 # install backend :
 # npm init -y
 # npm i express cors nodemon mysql

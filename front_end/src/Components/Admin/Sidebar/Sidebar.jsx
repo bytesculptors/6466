@@ -1,6 +1,6 @@
 import React from 'react'
 import navLinks from '../../data/NavLink'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import "./Sidebar.css"
 import { useDispatch } from 'react-redux';
 import { clearUser } from '../../../Redux/userSlice';
@@ -10,9 +10,10 @@ import { clearUser } from '../../../Redux/userSlice';
 
 function Sidebar() {
   const dispatch = useDispatch();
-  
+  const navigate = useNavigate();
   const handleLogout = () => {
     dispatch(clearUser());
+    navigate("/home")
   };
 
 

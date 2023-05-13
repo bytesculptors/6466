@@ -18,7 +18,7 @@ function App() {
   // const dispatch = useDispatch();
   const user = useSelector(state => state.user);
   console.log(user);
-  
+
 
   // useEffect(() => {
   //   window.addEventListener('beforeunload', () => {
@@ -39,10 +39,14 @@ function App() {
         <BookingDataProvider>
           <CarsData />
           <UserData />
-          <BookingData/>
+          <BookingData />
           <BrowserRouter>
             <Routes>
-              <Route path='*' element={user.access === 'admin' ? <Admin /> : <Home />}></Route>
+              <Route path='*' element={user.access === 'admin' ? (
+                <Admin />
+              ) : (
+                <Home />
+              )}></Route>
               <Route path='/login' element={<Login />}></Route>
               <Route path='/signup' element={<Signup />}></Route>
             </Routes>
@@ -55,3 +59,9 @@ function App() {
 
 
 export default App;
+
+
+
+// // : user.access === 'user' ? (
+//   <Customer />
+//   ) 
