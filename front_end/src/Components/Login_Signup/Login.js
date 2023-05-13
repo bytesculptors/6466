@@ -37,7 +37,7 @@ function Login() {
                         if (res.data === "Faile") {
                             alert("No record existed");
                         } else {
-                            navigate("/");
+                            navigate("*");
                             dispatch(setUser(res.data[0]));
                             console.log("data", res.data[0]);
                         }
