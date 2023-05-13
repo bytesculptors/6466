@@ -17,11 +17,22 @@ const db = mysql.createConnection({
 })
 
 app.post('/signup', (req, res) => {
-    const sql = 'INSERT INTO user (user_name,user_email,pass_word, access) VALUES (?)';
-    const values = [req.body.name, req.body.email, req.body.password, "user"];
+    const sql = 'INSERT INTO `user` (`user_name`, `user_email`, `pass_word`, `access`, `full_name`, `citizenID`, `phone_number`, `address`, `date_of_birth`) VALUES (?)';
+    const values = [
+        req.body.name,
+        req.body.email,
+        req.body.password,
+        "user",
+        req.body.full_name,
+        req.body.citizenID,
+        req.body.phone_number,
+        req.body.address,
+        req.body.date_of_birth
+    ];
 
     db.query(sql, [values], (err, data) => {
         if (err) {
+            console.log(err);
             return res.json("Error");
         }
         return res.json(data);
