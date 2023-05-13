@@ -43,14 +43,6 @@ const CarDetails = () => {
                   className=" d-flex align-items-center mt-3"
                   style={{ columnGap: "4rem" }}
                 >
-                  {/* <span className=" d-flex align-items-center gap-1 section__description">
-                    <i
-                      class="ri-roadster-line"
-                      style={{ color: "#f9a826" }}
-                    ></i>{" "}
-                    {singleCarItem.model}
-                  </span> */}
-
                   <span className=" d-flex align-items-center gap-1 section__description">
                     <i
                       class="ri-settings-2-line"
@@ -94,21 +86,19 @@ const CarDetails = () => {
                   </span>
                 </div>
               </div>
-            </Col>
-
-            <Col lg="7" className="mt-5">
+              
               <div className="booking-info mt-5">
                 <h5 className="mb-4 fw-bold ">Thông tin đặt hàng</h5>
                 <BookingForm />
               </div>
             </Col>
 
-            <Col lg="5" className="mt-5">
-              <div className="payment__info mt-5">
-                <h5 className="mb-4 fw-bold ">Thông tin thanh toán</h5>
-                <PaymentMethod />
+            {/* <Col lg="7" className="mt-5">
+              <div className="booking-info mt-5">
+                <h5 className="mb-4 fw-bold ">Thông tin đặt hàng</h5>
+                <BookingForm />
               </div>
-            </Col>
+            </Col> */}
           </Row>
         </Container>
       </section>
