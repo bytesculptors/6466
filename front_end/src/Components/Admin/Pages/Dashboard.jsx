@@ -74,7 +74,7 @@ function Dashboard() {
                 <td>{car.tranmission}</td>
                 <td>{car.num_seats}</td>
                 <td>{car.fuel_type}</td>
-                <td>{car.price_per_day}</td>
+                <td>{car.price_per_day.toLocaleString("vi-VN")}</td>
                 <td className='car_image'>  <a href={car.image}> Image Link</a></td>
               </tr>
             ))}
