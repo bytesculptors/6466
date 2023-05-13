@@ -14,7 +14,7 @@ const carData = [
     brand: "Suzuki",
     carName: "SUZUKI XL7",
     imgUrl: img01,
-    price: 500.000,
+    price: 500000,
     speed: "65km/h",
     fuel: "Xăng",
     seatType: "7 chỗ",
@@ -28,7 +28,7 @@ const carData = [
     brand: "Kia",
     carName: "KIA SORENTO",
     imgUrl: img02,
-    price: 500.000,
+    price: 500000,
     speed: "60km/h",
     fuel: "Dầu Diesel",
     seatType: "7 chỗ",
@@ -162,6 +162,7 @@ const carData = [
     description:
       " Mercedes_Benz 2018( FORM MỚI KHÁC FORM 2016) Full option, xe mới đẹp long lanh. Xe mới sạch sẽ, Rada cảnh báo va chạm và phanh chủ động. Form S-Class có nước hoa tự động. Định vị toàn cầu. Không lo lạc đường. Hệ thống kiểm soát hành trình, cảnh báo hỗ trợ phanh tự động khi có va chạm. Cốp điện, cửa sổ trời, loa Burmester Xe được chăm sóc và làm đẹp định kì. ",
   },
+ 
 ];
 
 export default carData;

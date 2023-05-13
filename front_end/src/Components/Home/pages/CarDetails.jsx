@@ -31,7 +31,7 @@ const CarDetails = () => {
 
                 <div className=" d-flex align-items-center gap-5 mb-4 mt-3">
                   <h6 className="rent__price fw-bold fs-4">
-                    {singleCarItem.price} VNĐ / Ngày
+                    {singleCarItem.price.toLocaleString("vi-VN")} VNĐ / Ngày
                   </h6>
                 </div>
 
