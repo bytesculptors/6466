@@ -12,6 +12,7 @@ import { UserDataProvider } from './Components/data/UserContext';
 import UserData from './Components/data/UserData';
 import { BookingDataProvider } from './Components/data/BookingContext';
 import BookingData from './Components/data/BookingData';
+import Customers from './Components/Customers/Customers';
 
 
 function App() {
@@ -44,16 +45,18 @@ function App() {
             <Routes>
               <Route path='*' element={user.access === 'admin' ? (
                 <Admin />
+              ) : user.access === 'user' ? (
+              <Customers />
               ) : (
-                <Home />
+              <Home />
               )}></Route>
-              <Route path='/login' element={<Login />}></Route>
-              <Route path='/signup' element={<Signup />}></Route>
-            </Routes>
-          </BrowserRouter>
-        </BookingDataProvider>
-      </UserDataProvider>
-    </CarDataProvider>
+            <Route path='/login' element={<Login />}></Route>
+            <Route path='/signup' element={<Signup />}></Route>
+          </Routes>
+        </BrowserRouter>
+      </BookingDataProvider>
+    </UserDataProvider>
+    </CarDataProvider >
   );
 }
 
