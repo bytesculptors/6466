@@ -18,7 +18,7 @@ const CarDetails = () => {
 
   return (
     <Helmet title={singleCarItem.carName}>
-      <section>
+      <section className="mt-5">
         <Container>
           <Row>
             <Col lg="6">

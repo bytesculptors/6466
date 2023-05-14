@@ -19,7 +19,7 @@ const BlogDetails = () => {
 
   return (
     <Helmet title={blog.title}>
-      <section>
+      <section className="mt-5">
         <Container>
           <Row>
             <Col lg="8" md="8">

@@ -21,7 +21,7 @@ const Home = () => {
       {/* =========== about section ================ */}
       <AboutSection aboutClass="aboutPage" />
       {/* ========== services section ============ */}
-      <section>
+      <section className="mt-5">
         <Container>
           <Row>
             <Col lg="12" className="mb-5 text-center">
@@ -35,7 +35,7 @@ const Home = () => {
       </section>
       {/* =========== car offer section ============= */}
       <section>
-        <Container>
+        <Container className="mt-5">
           <Row>
             <Col lg="12" className="text-center mb-5">
               <h6 className="section__subtitle">Đi kèm với</h6>
@@ -50,7 +50,7 @@ const Home = () => {
       </section>
 
       {/* =============== blog section =========== */}
-      <section>
+      <section className="mt-5">
         <Container>
           <Row>
             <Col lg="12" className="mb-5 text-center">

@@ -9,8 +9,8 @@ import ava03 from "../../assets/all-images/ava-3.jpg";
 const OUR__MEMBERS = [
   {
     name: "Ngô Đăng Hoàng Anh",
-    experience: "5 years of experience",
-    fbUrl: "#",
+    experience: "19021144",
+    fbUrl: "https://www.facebook.com/ndhoanganh.0412",
     instUrl: "#",
     twitUrl: "#",
     linkedinUrl: "#",
@@ -19,7 +19,7 @@ const OUR__MEMBERS = [
 
   {
     name: "Nguyễn Đăng Hải",
-    experience: "5 years of experience",
+    experience: "21020313",
     fbUrl: "https://www.facebook.com/danghain2003",
     instUrl: "#",
     twitUrl: "#",
@@ -29,7 +29,7 @@ const OUR__MEMBERS = [
 
   {
     name: "Trần Tuấn Nghĩa",
-    experience: "5 years of experience",
+    experience: "21020549",
     fbUrl: "https://www.facebook.com/scl200603/",
     instUrl: "#",
     twitUrl: "#",
@@ -39,7 +39,7 @@ const OUR__MEMBERS = [
 
   {
     name: "Đỗ Minh Sáng",
-    experience: "5 years of experience",
+    experience: "21020717",
     fbUrl: "https://www.facebook.com/sangdo003423",
     instUrl: "#",
     twitUrl: "#",

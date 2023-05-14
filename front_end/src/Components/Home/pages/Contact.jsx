@@ -29,33 +29,9 @@ const Contact = () => {
   return (
     <Helmet title="Contact">
       <CommonSection title="Liên hệ" />
-      <section>
+      <section className="mb-5">
         <Container>
           <Row>
-            {/* <Col lg="7" md="7">
-              <h6 className="fw-bold mb-4">Liên hệ</h6>
-
-              <Form>
-                <FormGroup className="contact__form">
-                  <Input placeholder="Tên" type="text" />
-                </FormGroup>
-                <FormGroup className="contact__form">
-                  <Input placeholder="Email" type="email" />
-                </FormGroup>
-                <FormGroup className="contact__form">
-                  <textarea
-                    rows="5"
-                    placeholder="Ghi chú"
-                    className="textarea"
-                  ></textarea>
-                </FormGroup>
-
-                <button className=" contact__btn" type="submit">
-                  Gửi tin nhắn
-                </button>
-              </Form>
-            </Col> */}
-
             <Col lg="5" md="5">
               <div className="contact__info">
                 <h6 className="fw-bold">Thông tin liên hệ</h6>
