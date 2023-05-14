@@ -15,7 +15,7 @@ const About = () => {
       <CommonSection title="Về chúng tôi" />
       <AboutSection aboutClass="aboutPage" />
 
-      <section className="about__page-section">
+      <section className="about__page-section mt-5 mb-5">
         <Container>
           <Row>
             <Col lg="6" md="6" sm="12">

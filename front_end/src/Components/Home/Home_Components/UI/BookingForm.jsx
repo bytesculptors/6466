@@ -20,7 +20,7 @@ const BookingForm = () => {
         </FormGroup>
       </Form>
       <div className="payment text-end mt-5">
-        <button>Reserve Now</button>
+        <button>Thuê ngay</button>
       </div>
     </div>
   );
