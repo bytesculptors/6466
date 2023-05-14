@@ -7,7 +7,7 @@ function Dashboard() {
 
   const { carData } = useContext(CarDataContext);
   const { userData } = useContext(UserContext);
-  console.log(userData);
+  console.log("Car", carData);
   const dataLength = carData ? carData.length : 0;
   const [showCarTable, setShowCarTable] = useState(true);
   const toggleTable = () => {

@@ -18,7 +18,8 @@ function Setting() {
     phone_number: userData.phone_number,
     user_images: userData.user_images,
     address: userData.address,
-  });
+    date_of_birth: userData.date_of_birth,
+    });
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -59,8 +60,12 @@ function Setting() {
 
         <div className='label'><label htmlFor="phone_number">Số điện thoại:</label></div>
         <input className='input' type="text" id="phone_number" name="phone_number" value={user.phone_number} onChange={handleInputChange} /><br /><br />
+
         <div className='label'><label htmlFor='address'>Địa chỉ</label></div>
         <input className='input' type='text' id='address' name='address' value={user.address} onChange={handleInputChange} /> <br /> <br />
+
+        <div className='label'><label htmlFor='date_of_birth'>Ngày sinh</label></div>
+        <input className='input' type='text' id='address' name='address' value={new Date(user.date_of_birth).toISOString().slice(0, 10)} onChange={handleInputChange} readnOnly/> <br /> <br />
 
         <input className='submit_buttom' type="submit" value="Cập nhật" />
       </form>
