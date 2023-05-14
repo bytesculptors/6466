@@ -96,12 +96,7 @@ function Signup() {
                         {/* {errors.password && <span className='text-danger'>{errors.password}</span>} */}
                     </div>
 
-                    <div className="mb-3">
-                        <label htmlFor="date_of_birth" ><strong>Ngày sinh</strong></label>
-                        <input type="date_of_birth" placeholder="YYYY-MM-DD" name='date_of_birth'
-                            onChange={handleInput} className='form-control rounded-0' />
-                        {/* {errors.password && <span className='text-danger'>{errors.password}</span>} */}
-                    </div>
+                   
 
                     <label>
                         <input type="checkbox" checked={isChecked} onChange={handleCheckboxChange} />
