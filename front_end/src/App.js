@@ -12,6 +12,7 @@ import { UserDataProvider } from './Components/data/UserContext';
 import UserData from './Components/data/UserData';
 import { BookingDataProvider } from './Components/data/BookingContext';
 import BookingData from './Components/data/BookingData';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import Customers from './Components/Customers/Customers';
 
 
