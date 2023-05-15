@@ -21,19 +21,6 @@ function App() {
   console.log(user);
 
 
-  // useEffect(() => {
-  //   window.addEventListener('beforeunload', () => {
-  //     const entries = performance.getEntriesByType('navigation');
-  //     const isReloading = entries.length && entries[0].type === 'reload';
-  //     console.log(isReloading)
-  //     if (!isReloading) {
-  //       // Xử lý khi trang tắt đi
-  //       window.localStorage.clear();
-  //       dispatch(clearUser());
-  //     }
-  //   });
-  // }, [dispatch]);
-
   return (
     <CarDataProvider>
       <UserDataProvider>
