@@ -6,6 +6,16 @@ body {
 }
 
 .table_content {
+  max-height: 300px; /* Đặt chiều cao tối đa của bảng */
+  overflow: auto; /* Hiển thị thanh cuộn dọc khi nội dung vượt quá kích thước */
+}
+
+.table_content.hidden + .total_user {
+  display: none; /* Ẩn phần tử total_user khi bảng được thu gọn */
+}
+
+
+.table_content {
   display: block;
   position: relative;
 }
@@ -21,6 +31,13 @@ body {
   position: static !important;
   font-size: 2rem;
 }
+.booking_content {
+  text-align: left;
+}
+
+.booking_content table {
+  margin-left: 0;
+}
 
 .profile-head {
   transform: translateY(5rem);
@@ -28,7 +45,7 @@ body {
 
 .emp-profile {
   padding: 3%;
-  margin-top: 10%;
+  margin-top: 0%;
   margin-bottom: 5%;
   border-radius: 0.5rem;
   background: #fff;
@@ -205,3 +222,5 @@ input[type="checkbox"] {
   .custom-file-input:focus .custom-file-label::after {
   box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
   }
+
+  

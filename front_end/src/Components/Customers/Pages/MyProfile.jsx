@@ -45,14 +45,14 @@ function MyProfile() {
         <div className="row">
           <div className="col-md-4">
             <div className="profile-img">
-            <img src={user.user_images ? user.user_images : "https://images.pexels.com/photos/2754200/pexels-photo-2754200.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"} alt="" />
+              <img src={user.user_images ? user.user_images : "https://images.pexels.com/photos/2754200/pexels-photo-2754200.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"} alt="" />
 
             </div>
           </div>
           <div className="col-md-6">
             <div className="profile-head">
               <h3>
-                Thay đổi thông tin:
+                {user.full_name}
               </h3>
               <ul className="nav nav-tabs" id="myTab" role="tablist">
                 <li className="nav-item">
