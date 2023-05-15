@@ -50,25 +50,25 @@ function Login() {
     return (
         <div className='d-flex justify-content-center align-items-center bg-primary vh-100'>
             <div className='bg-white p-3 rounded w-25'>
-                <h2>Sign In</h2>
+                <h2>Đăng nhập</h2>
                 <form action='' onSubmit={handleSubmit}>
                     <div className='mb-3'>
-                        <label htmlFor='userName'><strong>userName </strong></label>
-                        <input type='userName' placeholder='Enter your userName' name='userName'
+                        <label htmlFor='userName'><strong>Tên đăng nhập </strong></label>
+                        <input type='userName' placeholder='Nhập tên của bạn' name='userName'
                             onChange={handleInput} className='form-control rounded-0' />
                         {errors.userName && <span className='text-danger'>{errors.userName}</span>}
                     </div>
 
                     <div className="mb-3">
-                        <label htmlFor="password" ><strong>Password </strong></label>
-                        <input type="password" placeholder="Enter password" name='password'
+                        <label htmlFor="password" ><strong>Mật khẩu </strong></label>
+                        <input type="password" placeholder="Nhập mật khẩu" name='password'
                             onChange={handleInput} className='form-control rounded-0' />
                         {errors.password && <span className='text-danger'>{errors.password}</span>}
                     </div>
 
-                    <button type='submit' className=' btn btn-success w-100 rounded-0'>Log in</button>
-                    <p>You are agree to our terms and policies</p>
-                    <Link to='/signup' className='btn btn-default border w-100 bg-light rounded-0 text-decoration-none'>Create account</Link>
+                    <button type='submit' className=' btn btn-success w-100 rounded-0'>Đăng nhập</button>
+                    <p>Bạn đồng ý với các điều khoản và chính sách của chúng tôi</p>
+                    <Link to='/signup' className='btn btn-default border w-100 bg-light rounded-0 text-decoration-none'>Tạo tài khoản mới</Link>
                 </form>
             </div>
         </div>

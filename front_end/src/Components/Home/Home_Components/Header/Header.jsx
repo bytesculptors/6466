@@ -186,7 +186,7 @@ const Header = () => {
 
             <button className="header__btn btn ">
                 <Link to="/home">
-                  <i></i> {user.user_name ? `Xin chào, ${user.user_name}` : "Xin chào mừng đã đến website của chúng tối!"}
+                  <i></i> {user.user_name ? `Xin chào, ${user.user_name}` : "Xin chào mừng đã đến website của chúng tôi!"}
                 </Link>
               </button>
              
