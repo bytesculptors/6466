@@ -67,14 +67,14 @@ function ChangePassword() {
         <div className="row">
           <div className="col-md-4">
             <div className="profile-img">
-              <img src={user.user_images} alt="" />
+            <img src={user.user_images ? user.user_images : "https://images.pexels.com/photos/2754200/pexels-photo-2754200.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"} alt="" />
             </div>
           </div>
           <div className="col-md-6">
             <div className="profile-head">
-              <h6>
-                {user.user_name}
-              </h6>
+              <h3>
+                {user.full_name}
+              </h3>
               <ul className="nav nav-tabs" id="myTab" role="tablist">
                 <li className="nav-item">
                   <a className="nav-link active" id="home-tab" data-toggle="tab" href="/thong_tin" role="tab" aria-controls="home" aria-selected="true">Thông tin cá nhân</a>

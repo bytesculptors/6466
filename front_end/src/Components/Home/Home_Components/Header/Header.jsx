@@ -4,6 +4,8 @@ import { Container, Row, Col } from "reactstrap";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import "../../styles/header.css";
 import { clearUser } from '../../../../Redux/userSlice';
+import Dropdown from 'react-bootstrap/Dropdown'
+
 
 const navLinks = [
   {
@@ -57,16 +59,27 @@ const Header = () => {
             </Col>
 
             <Col lg="6" md="6" sm="6">
-              <Link to="/login" className="d-flex align-items-center gap-1">
-                <i className="ri-login-circle-line"></i> Đăng nhập
-              </Link>
-              {user ? (
+
+              {user.user_name ? (
+                console.log(1),
                 <div className="header__top__right d-flex align-items-center justify-content-end gap-3">
+                  
+                  <Link to="/thong_tin" className="d-flex align-items-center gap-1">
+                    <i className="ri-login-circle-line"></i> Trang cá nhân
+                  </Link>
                   <span onClick={handleLogout}>
-                    <i className="ri-logout-circle-r-line"></i> Xin chào các bạn, Mình là Chao đây!
+                  <Link to="/home" className="d-flex align-items-center gap-1">
+                    <i className="ri-user-line"></i> Đăng xuất
+                  </Link>
                   </span>
                 </div>
+
+
+
               ) : (
+                console.log(2),
+
+
                 <div className="header__top__right d-flex align-items-center justify-content-end gap-3">
                   <Link to="/login" className="d-flex align-items-center gap-1">
                     <i className="ri-login-circle-line"></i> Đăng nhập
@@ -170,33 +183,15 @@ const Header = () => {
             </div>
 
             <div className="nav__right">
-              <div className="dropdown">
-                <button
-                  className="btn btn-secondary dropdown-toggle"
-                  type="button"
-                  id="dropdownMenuButton1"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  {user ? `Xin chào, ${user.user_name}` : "Xin chào"}
-                </button>
-                <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li>
-                    <Link to="/thong_tin">Thông tin cá nhân</Link>
-                  </li>
-                  <li>
-                    <Link to="/my_booking">Đơn của tôi</Link>
-                  </li>
-                  <li>
-                    <Link to="/update_password">Thay đổi mật khẩu</Link>
-                  </li>
-                  <li>
-                    <Link to="/home" onClick={handleLogout}>
-                      Đăng xuất
-                    </Link>
-                  </li>
-                </ul>
-              </div>
+
+            <button className="header__btn btn ">
+                <Link to="/home">
+                  <i></i> {user.user_name ? `Xin chào, ${user.user_name}` : "Xin chào mừng đã đến website của chúng tôi!"}
+                </Link>
+              </button>
+             
+                  
+
             </div>
           </div>
         </Container>

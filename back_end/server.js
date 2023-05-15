@@ -155,14 +155,22 @@ app.post("/profile",
 
 app.post("/new_booking", (req, res) => {
 
-    const newBooking = req.body.booking;
+    const newBooking = req.body;
 
-    // Perform any necessary validation on the input data
+    const start = new Date(newBooking.startDate);
+    const end = new Date(newBooking.endDate);
+    const days = Math.ceil(Math.abs(end - start) / (1000 * 60 * 60 * 24));
+    const totalPrice = days * newBooking.pRice;
 
-    const sql = "INSERT INTO booking (user_id, car_id, start_date, end_date, total_price) VALUES (?, ?, ?, ?, DATEDIFF(?, ?) * ?)";
+    const sql = "INSERT INTO bookings (user_id, car_id, start_date, end_date, total_price) VALUES (?, ?, ?, ?, ?)";
     const values = [
-        newBooking.userId, newBooking.carId, newBooking.startDate, newBooking.endDate, newBooking.endDate, newBooking.startDate, newBooking.price];
-         console.log(values);
+        newBooking.userId,
+        newBooking.carId,
+        newBooking.startDate,
+        newBooking.endDate,
+        totalPrice
+    ];
+    console.log(values);
 
     db.query(sql, values, (err, data) => {
         if (err) {
