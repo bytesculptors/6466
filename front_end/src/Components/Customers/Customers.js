@@ -9,6 +9,7 @@ import BlogDetails from "../Home/pages/BlogDetails";
 import NotFound from "../Home/pages/NotFound";
 import Contact from "../Home/pages/Contact";
 import Header from '../../Components/Home/Home_Components/Header/Header'
+import Footer from '../../Components/Home/Home_Components/Footer/Footer'
 import MyProfile from './Pages/MyProfile';
 import UpdatePassword from './Pages/UpdatePassword';
 import MyBooking from './Pages/MyBooking';
@@ -27,7 +28,8 @@ function Customers() {
       <div className='main_layout'>
         <div className='content'>
         <Header/>
-          <Routes>          
+          <Routes>  
+              
             <Route path='/home' element={<Home onLoginSuccess={handleLoginSuccess} />}  />
             <Route path='/about' element={<About onLoginSuccess={handleLoginSuccess} />} />
             <Route path="/cars" element={<CarListing onLoginSuccess={handleLoginSuccess} />} />
@@ -38,10 +40,12 @@ function Customers() {
             <Route path='thong_tin' element = {<MyProfile/>}></Route>
             <Route path='/update_password' element = {<UpdatePassword/>}></Route>
             <Route path='/my_booking' element = {<MyBooking/>}></Route>
+            <Route path='/' element={<Home onLoginSuccess={handleLoginSuccess} />}  />    
             {/* <Route path='bookings' element = {<Booking/>}></Route>
             <Route path='profile' element = {<Setting/>}></Route> */}
             <Route path="*" element={<NotFound onLoginSuccess={handleLoginSuccess} />} />
           </Routes>
+          <Footer/>
         </div>
       </div>
     </div>

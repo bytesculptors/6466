@@ -10,7 +10,7 @@ import img08 from "../all-images/cars-img/mercedes-offer.png";
 
 const carData = [
   {
-    id: 1,
+    car_id: 1,
     brand: "Suzuki",
     carName: "SUZUKI XL7",
     imgUrl: img01,
@@ -24,7 +24,7 @@ const carData = [
   },
 
   {
-    id: 2,
+    car_id: 2,
     brand: "Kia",
     carName: "KIA SORENTO",
     imgUrl: img02,
@@ -38,7 +38,7 @@ const carData = [
   },
 
   {
-    id: 3,
+    car_id: 3,
     brand: "Kia",
     carName: "KIA MORNING SI",
     imgUrl: img03,
@@ -52,7 +52,7 @@ const carData = [
   },
 
   {
-    id: 4,
+    car_id: 4,
     brand: "Toyota",
     carName: "TOYOTA INNOVA G",
     imgUrl: img04,
@@ -66,7 +66,7 @@ const carData = [
   },
 
   {
-    id: 5,
+    car_id: 5,
     brand: "Honda",
     carName: "HONDA CITY",
     imgUrl: img05,
@@ -80,7 +80,7 @@ const carData = [
   },
 
   {
-    id: 6,
+    car_id: 6,
     brand: "Hyundai",
     carName: "HYUNDAI GRAND I10",
     imgUrl: img06,
@@ -94,7 +94,7 @@ const carData = [
   },
 
   {
-    id: 7,
+    car_id: 7,
     brand: "Ford",
     carName: "FORD RANGER XLS",
     imgUrl: img07,
@@ -108,7 +108,7 @@ const carData = [
   },
 
   {
-    id: 8,
+    car_id: 8,
     brand: "Mercedes",
     carName: "MERCEDES C250",
     imgUrl: img08,
@@ -122,7 +122,7 @@ const carData = [
   },
 
   {
-    id: 9,
+    car_id: 9,
     brand: "Honda",
     carName: "HONDA CITY",
     imgUrl: img08,
@@ -136,7 +136,7 @@ const carData = [
   },
 
   {
-    id: 10,
+    car_id: 10,
     brand: "Mercedes",
     carName: "MERCEDES C250",
     imgUrl: img08,
@@ -150,7 +150,7 @@ const carData = [
   },
 
   {
-    id: 11,
+    car_id: 11,
     brand: "Mercedes",
     carName: "MERCEDES C250",
     imgUrl: img08,

@@ -81,14 +81,14 @@ app.post('/dashboard', (req, res) => {
     } else if (req.body.key === "delete car") {
         const sql = "DELETE FROM `cars` WHERE car_id = ?";
         console.log(req.body)
-        db.query(sql, req.body.value.car_id, (err, data)=> {
+        db.query(sql, req.body.value.car_id, (err, data) => {
             if (err) {
                 console.log(err);
                 return res.json("Error");
             }
             return res.json(data)
         })
-    }else {
+    } else {
         const sql = 'INSERT INTO `cars`(`brand`, `model`, `year`, `tranmission`, `num_seats`, `fuel_type`, `price_per_day`, `image`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
         db.query(sql, [req.body.brand, req.body.model, req.body.year, req.body.transmission, req.body.num_seats, req.body.fuel_type, req.body.price_per_day, req.body.image], (err, data) => {
             if (err) {
@@ -118,6 +118,7 @@ app.post('/booking',
             })
         }
     })
+
 
 
 app.post("/profile",
@@ -150,4 +151,28 @@ app.post("/profile",
         })
 
     })
+
+
+app.post("/new_booking", (req, res) => {
+
+    const newBooking = req.body.booking;
+
+    // Perform any necessary validation on the input data
+
+    const sql = "INSERT INTO booking (user_id, car_id, start_date, end_date, total_price) VALUES (?, ?, ?, ?, DATEDIFF(?, ?) * ?)";
+    const values = [
+        newBooking.userId, newBooking.carId, newBooking.startDate, newBooking.endDate, newBooking.endDate, newBooking.startDate, newBooking.price];
+         console.log(values);
+
+    db.query(sql, values, (err, data) => {
+        if (err) {
+            console.log(err);
+            return res.json("Cap nhat that bai");
+        } else {
+            console.log(1);
+            return res.json("Success");
+        }
+    })
+});
+
 app.listen(8082, () => { console.log("listening"); })

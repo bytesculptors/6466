@@ -1,8 +1,9 @@
 import React, { useRef } from "react";
-
+import { useDispatch, useSelector } from 'react-redux'
 import { Container, Row, Col } from "reactstrap";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import "../../styles/header.css";
+import { clearUser } from '../../../../Redux/userSlice';
 
 const navLinks = [
   {
@@ -30,7 +31,14 @@ const navLinks = [
 
 const Header = () => {
   const menuRef = useRef(null);
-
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const user = useSelector(state => state.user);
+  const handleLogout = () => {
+    dispatch(clearUser());
+    navigate("/home");
+    window.location.reload();
+  };
   const toggleMenu = () => menuRef.current.classList.toggle("menu__active");
 
   return (
@@ -49,16 +57,29 @@ const Header = () => {
             </Col>
 
             <Col lg="6" md="6" sm="6">
-              <div className="header__top__right d-flex align-items-center justify-content-end gap-3">
-                <Link to="/login" className=" d-flex align-items-center gap-1">
-                  <i class="ri-login-circle-line"></i> Đăng nhập
-                </Link>
-
-                <Link to="signup" className=" d-flex align-items-center gap-1">
-                  <i class="ri-user-line"></i> Đăng ký
-                </Link>
-              </div>
+              <Link to="/login" className="d-flex align-items-center gap-1">
+                <i className="ri-login-circle-line"></i> Đăng nhập
+              </Link>
+              {user ? (
+                <div className="header__top__right d-flex align-items-center justify-content-end gap-3">
+                  <span onClick={handleLogout}>
+                    <i className="ri-logout-circle-r-line"></i> Xin chào các bạn, Mình là Chao đây!
+                  </span>
+                </div>
+              ) : (
+                <div className="header__top__right d-flex align-items-center justify-content-end gap-3">
+                  <Link to="/login" className="d-flex align-items-center gap-1">
+                    <i className="ri-login-circle-line"></i> Đăng nhập
+                  </Link>
+                  <Link to="/signup" className="d-flex align-items-center gap-1">
+                    <i className="ri-user-line"></i> Đăng ký
+                  </Link>
+                </div>
+              )}
             </Col>
+
+
+
           </Row>
         </Container>
       </div>
@@ -120,41 +141,66 @@ const Header = () => {
         </Container>
       </div>
 
+
+
       {/* ========== main navigation =========== */}
 
       <div className="main__navbar">
         <Container>
           <div className="navigation__wrapper d-flex align-items-center justify-content-between">
             <span className="mobile__menu">
-              <i class="ri-menu-line" onClick={toggleMenu}></i>
+              <i className="ri-menu-line" onClick={toggleMenu}></i>
             </span>
 
             <div className="navigation" ref={menuRef} onClick={toggleMenu}>
               <div className="menu">
                 {navLinks.map((item, index) => (
                   <NavLink
+                    key={index}
                     to={item.path}
                     className={(navClass) =>
                       navClass.isActive ? "nav__active nav__item" : "nav__item"
                     }
-                    key={index}
                   >
                     {item.display}
                   </NavLink>
                 ))}
+
               </div>
             </div>
 
-            {/* <div className="nav__right">
-              <div className="search__box">
-                <input type="text" placeholder="Tìm kiếm" />
-                <span>
-                  <i class="ri-search-line"></i>
-                </span>
+            <div className="nav__right">
+              <div className="dropdown">
+                <button
+                  className="btn btn-secondary dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  {user ? `Xin chào, ${user.user_name}` : "Xin chào"}
+                </button>
+                <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li>
+                    <Link to="/thong_tin">Thông tin cá nhân</Link>
+                  </li>
+                  <li>
+                    <Link to="/my_booking">Đơn của tôi</Link>
+                  </li>
+                  <li>
+                    <Link to="/update_password">Thay đổi mật khẩu</Link>
+                  </li>
+                  <li>
+                    <Link to="/home" onClick={handleLogout}>
+                      Đăng xuất
+                    </Link>
+                  </li>
+                </ul>
               </div>
-            </div> */}
+            </div>
           </div>
         </Container>
+
       </div>
     </header>
   );

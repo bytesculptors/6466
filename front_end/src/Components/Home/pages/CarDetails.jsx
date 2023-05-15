@@ -89,7 +89,7 @@ const CarDetails = () => {
               
               <div className="booking-info mt-5">
                 <h5 className="mb-4 fw-bold ">Thông tin đặt hàng</h5>
-                <BookingForm />
+                <BookingForm item={{ car_id:singleCarItem.car_id, price:singleCarItem.price }} />
               </div>
             </Col>
 

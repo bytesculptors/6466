@@ -1,25 +1,24 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { BookingContext } from '../../data/BookingContext';
-import './Styles/Booking.css';
-import { useSelector } from 'react-redux';
+import React, { useContext, useEffect, useState } from 'react'
+import { BookingContext } from '../../data/BookingContext'
+import { useDispatch, useSelector } from 'react-redux'
+import './Styles/main.css'
 
-function MyBooking() {
-  const { bookingData, setBookingData } = useContext(BookingContext);
-  const [filteredBookings, setFilteredBookings] = useState([]);
-  const user = useSelector(state => state.user);
+function Booking() {
+  const dispatch = useDispatch();
+  const userData = useSelector(state => state.user);
+  const { bookingData } = useContext(BookingContext);
+  const user_email = userData.user_email;
 
-  useEffect(() => {
-    setFilteredBookings(
-      bookingData.filter(booking => booking.user_id === user.user_id)
-    );
-  }, [bookingData, user]);
+  const [filteredArray, setFilteredArray] = useState([]);
 
   useEffect(() => {
-    fetch(`/api/bookings?user_id=${user.user_id}`)
-      .then(response => response.json())
-      .then(data => setBookingData(data))
-      .catch(error => console.error(error));
-  }, [setBookingData, user]);
+    console.log("booking", bookingData);
+    if (bookingData) {
+      const filtered = bookingData.filter(item => item.user_email === user_email);
+      setFilteredArray(filtered);
+      console.log(filtered);
+    }
+  }, [bookingData, user_email]);
 
   return (
     <div className='booking_content'>
@@ -37,7 +36,7 @@ function MyBooking() {
           </tr>
         </thead>
         <tbody>
-          {filteredBookings.map(booking => (
+          {filteredArray && filteredArray.map(booking => (
             <tr key={booking.booking_id}>
               <td>{booking.start_date}</td>
               <td>{booking.end_date}</td>
@@ -45,13 +44,13 @@ function MyBooking() {
               <td>{booking.brand}</td>
               <td>{booking.model}</td>
               <td>{booking.full_name}</td>
-              <td>{booking.user_id}</td>
+              <td>{booking.user_email}</td>
             </tr>
           ))}
         </tbody>
       </table>
     </div>
-  );
+  )
 }
 
-export default MyBooking;
+export default Booking

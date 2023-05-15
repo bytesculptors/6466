@@ -3,6 +3,7 @@ import { BookingContext } from '../../data/BookingContext'
 import './Styles/Booking.css'
 function Booking() {
   const { bookingData } = useContext(BookingContext);
+  console.log(bookingData);
   useEffect(() => {
     console.log("booking", bookingData);
   }, [bookingData]);
