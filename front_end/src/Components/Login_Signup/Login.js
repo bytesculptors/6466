@@ -68,6 +68,7 @@ function Login() {
 
                     <button type='submit' className=' btn btn-success w-100 rounded-0'>Đăng nhập</button>
                     <p>Bạn đồng ý với các điều khoản và chính sách của chúng tôi</p>
+                    <Link to='/home' className='btn btn-default border w-100 bg-light rounded-0 text-decoration-none'>Quay trờ về trang chủ</Link>
                     <Link to='/signup' className='btn btn-default border w-100 bg-light rounded-0 text-decoration-none'>Tạo tài khoản mới</Link>
                 </form>
             </div>
