@@ -3,6 +3,7 @@ import { BookingContext } from '../../data/BookingContext'
 import { useDispatch, useSelector } from 'react-redux'
 import './Styles/main.css'
 
+
 function Booking() {
   const dispatch = useDispatch();
   const userData = useSelector(state => state.user);
@@ -21,18 +22,36 @@ function Booking() {
   }, [bookingData, user_email]);
 
   return (
+
+
+
     <div className='booking_content'>
-      <h1>Booking Data</h1>
+
+      <ul className="nav nav-tabs" id="myTab" role="tablist">
+        <li className="nav-item">
+          <a className="nav-link active" id="home-tab" data-toggle="tab" href="/thong_tin" role="tab" aria-controls="home" aria-selected="true">Thông tin cá nhân</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" id="booking-tab" data-toggle="tab" href="/my_booking" role="tab" aria-controls="booking" aria-selected="false">Đơn đặt của tôi</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" id="booking-tab" data-toggle="tab" href="/update_password" role="tab" aria-controls="booking" aria-selected="false">Thay đổi mật khẩu</a>
+        </li>
+      </ul>
+
+
+      <h1>Đơn đặt của tôi:</h1>
+
       <table className='table table-striped table-info table-hover'>
         <thead>
           <tr>
-            <th>Start Date</th>
-            <th>End Date</th>
-            <th>Total Price</th>
-            <th>Car Brand</th>
-            <th>Car Model</th>
-            <th>User Name</th>
-            <th>User Email</th>
+            <th>Ngày bắt đầu thuê</th>
+            <th>Ngày kết thúc thuê</th>
+            <th>Tổng tiền</th>
+            <th>Hãng xe</th>
+            <th>Mẫu xe</th>
+            <th>Tên người dùng</th>
+            <th>Email</th>
           </tr>
         </thead>
         <tbody>
